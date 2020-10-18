@@ -7,10 +7,19 @@
                    mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <guiLib:WindowBase.Resources>
-        <ContextMenu x:Key="contextMenu">
-            <MenuItem Header="Test 1" />
-            <MenuItem Header="Test 2" />
-        </ContextMenu>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <!-- MahApps.Metro resource dictionaries. Make sure that all file names are Case Sensitive! -->
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Controls.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Fonts.xaml" />
+                <!-- Theme setting -->
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Themes/Light.Blue.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+            <ContextMenu x:Key="contextMenu">
+                <MenuItem Header="Test 1" />
+                <MenuItem Header="Test 2" />
+            </ContextMenu>
+        </ResourceDictionary>
     </guiLib:WindowBase.Resources>
     <Grid>
         <Button Content="Open Context Menu" HorizontalAlignment="Left" Margin="86,68,0,0" VerticalAlignment="Top" Width="128" Click="Button_Click"/>
